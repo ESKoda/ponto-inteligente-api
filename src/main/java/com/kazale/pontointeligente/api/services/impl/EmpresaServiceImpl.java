@@ -14,13 +14,14 @@ import com.kazale.pontointeligente.api.services.EmpresaService;
 @Service
 public class EmpresaServiceImpl implements EmpresaService{
 
+	//como eh chamado as classes Impl ?
 	private static final Logger log = LoggerFactory.getLogger(EmpresaServiceImpl.class);
 	
 	@Autowired
 	private EmpresaRepository empresaRepository;
 	
 	@Override
-	public Optional<Empresa> bucarPorCnpj(String cnpj) {
+	public Optional<Empresa> buscarPorCnpj(String cnpj) {
 		log.info("Buscando uma empresa para o CNPJ {}", cnpj);
 		return Optional.ofNullable(empresaRepository.findByCnpj(cnpj));
 	}

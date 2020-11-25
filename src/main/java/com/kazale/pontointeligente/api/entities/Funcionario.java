@@ -121,6 +121,13 @@ public class Funcionario implements Serializable{
 	public Float getQtdHorasAlmoco() {
 		return qtdHorasAlmoco;
 	}
+	
+	@Transient //@Transient: tratativa com o Optional para aceitar null, e o jpa ignorar 
+	public Optional<Float> getQtdHorasAlmocoOpt() {
+		return Optional.ofNullable(qtdHorasAlmoco);
+		
+	}
+	
 	public void setQtdHorasAlmoco(Float qtdHorasAlmoco) {
 		this.qtdHorasAlmoco = qtdHorasAlmoco;
 	}
@@ -134,7 +141,7 @@ public class Funcionario implements Serializable{
 		this.perfil = perfil;
 	}
 	
-	@Column(name="data_cricacao", nullable = false)
+	@Column(name="data_criacao", nullable = false)
 	public Date getDataCriacao() {
 		return dataCriacao;
 	}
@@ -165,9 +172,7 @@ public class Funcionario implements Serializable{
 	public void setLancamento(List<Lancamento> lancamentos) {
 		this.lancamento = lancamentos;
 	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+
 	
 	@PreUpdate
 	public void preUpdate() {
@@ -182,9 +187,13 @@ public class Funcionario implements Serializable{
 	}
 
 	@Override
-	public String toString () {
-	return "Funcionario [id=" + id + ", nome=" +
-	nome + ", email =" + email + ",	senha=" + senha + ", cpf=" + cpf + ", valorHora="+ valorHora + ", qtdHorasTrabalhoDia="+ qtdHorasTrabalhoDia + ", qtdHorasAlmoco=" + qtdHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao+ ", dataAtualizacao=" + dataAtualizacao + ", empresa="+empresa+ "]" ;
+	public String toString() {
+		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf
+				+ ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdHorasTrabalhoDia + ", qtdHorasAlmoco="
+				+ qtdHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao + ", dataAtualizacao="
+				+ dataAtualizacao + ", empresa=" + empresa + ", lancamento=" + lancamento + "]";
 	}
+
+
 	
 }

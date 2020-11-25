@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.querydsl.QPageRequest;
 import org.springframework.stereotype.Service;
 
 import com.kazale.pontointeligente.api.entities.Lancamento;
@@ -23,15 +22,16 @@ public class LancamentoServiceImpl implements LancamentoService{
 		private LancamentoRepository lancamentoRepository;
 		
 		@Override
-		public Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, QPageRequest pageRequest) {
+		//public Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, QPageRequest pageRequest) {
+		public Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, PageRequest pageRequest) {
 			log.info("Buscando lancamentos para o funcionario ID {}", funcionarioId);
 			return this.lancamentoRepository.findByFuncionarioId(funcionarioId, pageRequest);
 		}
 
 		@Override
-		public Optional<Lancamento> buscarPorId(Long Id) {
-			log.info("Buscando lancamentos pelo ID {}", Id);
-			return Optional.ofNullable(this.lancamentoRepository.findOne(Id));
+		public Optional<Lancamento> buscarPorId(Long id) {
+			log.info("Buscando lancamentos pelo ID {}", id);
+			return this.lancamentoRepository.findById(id);
 		}
 
 		@Override
