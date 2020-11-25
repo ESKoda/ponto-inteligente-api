@@ -8,7 +8,7 @@ import org.hibernate.validator.constraints.br.CNPJ;
 import org.hibernate.validator.constraints.br.CPF;
 
 public class CadastroPJDto {
-
+	//essa classe tera a funcao de POST
 	private Long id;
 	private String nome;
 	private String email;
