@@ -36,7 +36,7 @@ public class EmpresaController {
 	 * @param cnpj
 	 * @return ResponseEntity<Response<EmpresaDto>>
 	 */
-	@GetMapping(value = "/cnpj/{cnpj}")
+	@GetMapping(value = "/cnpj/{cnpj}") //fazer GET do cnpj
 	//o RequestMapping e @GetMapping irao trabalhar junto, o link ficara /api/empresas/cnpj/82198127000121
 	public ResponseEntity<Response<EmpresaDto>> buscarPorCnpj(@PathVariable("cnpj") String cnpj){
 		log.info("Buscando empresa por CNPJ: {}", cnpj);
@@ -54,7 +54,7 @@ public class EmpresaController {
 	}
 
 	/**
-	 * Popula um DTO com os dados de uma empresa
+	 * Popula um DTO com os dados de uma empresa, retorna no json
 	 * @param empresa
 	 * @return EmpresaDto
 	 */

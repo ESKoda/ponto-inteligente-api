@@ -51,7 +51,7 @@ public class CadastroPJController {
 	 */
 	
 	//@Valid faz validacao das anotacoes que foram colocados no dto CadastroPJDto
-	@PostMapping
+	@PostMapping //fazer post, insert no banco
 	public ResponseEntity<Response<CadastroPJDto>> cadastrar(@Valid @RequestBody CadastroPJDto cadastroPJDto,
 			BindingResult result) throws NoSuchAlgorithmException{
 		log.info("Cadastrando PJ: {}", cadastroPJDto.toString());
@@ -77,7 +77,8 @@ public class CadastroPJController {
 	}
 
 	/**
-	 * Popula o DTO de cadastro com os dados do funcionario e empresa
+	 * Popula o DTO de cadastro com os dados do funcionario e empresa, 
+	 * retorna no json
 	 * @param funcionario
 	 * @return CadastroPJDto
 	 */

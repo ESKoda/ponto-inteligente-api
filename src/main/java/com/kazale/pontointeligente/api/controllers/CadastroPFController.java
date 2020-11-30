@@ -51,7 +51,7 @@ public class CadastroPFController {
 	 * @return ResponseEntity<Response<CadastroPFDto>>
 	 * @throws NoSuchAlgorithmException
 	 */
-	@PostMapping
+	@PostMapping //fazer post, insert no banco
 	public ResponseEntity<Response<CadastroPFDto>> cadastrar(@Valid @RequestBody CadastroPFDto cadastroPFDto,
 			BindingResult result) throws NoSuchAlgorithmException {
 		log.info("Cadastrando PF: {}", cadastroPFDto.toString());
@@ -75,7 +75,8 @@ public class CadastroPFController {
 	}
 
 	/**
-	 * Popula o DTO de cadastro com os dados do funcionario e empresa
+	 * Popula o DTO de cadastro com os dados do funcionario e empresa, 
+	 * retorna no json
 	 * @param funcionario
 	 * @return CadastroPFDto
 	 */

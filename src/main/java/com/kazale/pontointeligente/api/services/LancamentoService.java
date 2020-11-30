@@ -16,7 +16,6 @@ public interface LancamentoService {
 	 * @return Page<Lancamento>
 	 */
 	Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, PageRequest pageRequest);
-	//Page<Lancamento> buscarPorFuncionarioId(Long funcionarioId, QPageRequest pageRequest);
 	
 	/**
 	 * Retorna um lancamento por ID
