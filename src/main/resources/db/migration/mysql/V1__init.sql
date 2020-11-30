@@ -59,3 +59,4 @@ ADD CONSTRAINT `FK4cm1kg523jlopyexjbmi6y54j` FOREIGN KEY (`empresa_id`) REFERENC
 
 ALTER TABLE `lancamento`
 ADD CONSTRAINT `FK46i4k5v18wah7feutye9kbpi4` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionario` (`id`);
+
