@@ -1,0 +1,15 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd">
+	<cache name="lancamentoPorId" 
+		maxEntriesLocalHeap="200"
+		timeToLiveSeconds="3600">
+	</cache>
+</ehcache>
+
+
+<!-- Este arquivo eh responsavel por habilitar o cache no spring boot -->
+<!-- senao automaticamente sera usado o cache in memory, mas nao eh eficiente -->
+
+<!-- name="lancamentoPorId": controlar listagem de lancamentos por ID -->
+<!-- maxEntriesLocalHeap: qtd maxima de entrada -->
+<!-- timeToLiveSeconds: quanto tempo que o valor vai cachear -->
