@@ -70,7 +70,7 @@
 			<artifactId>spring-security-test</artifactId>
 		</dependency>
 		
-		<!--Hibernate validator controllers-->
+		<!-- Hibernate validator controllers-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
