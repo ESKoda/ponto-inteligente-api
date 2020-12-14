@@ -232,6 +232,11 @@ public class LancamentoController {
 		return ResponseEntity.ok(response);		
 	}
 	
+	/**
+	 * Deleta um cliente informando um ID
+	 * @param id
+	 * @return ResponseEntity<Response<String>>
+	 */
 	//fazendo Delete pelo Postman (http://localhost:8080/api/lancamentos/2)
 	@DeleteMapping(value = "/{id}")
 	@PreAuthorize("hasAnyRole('ADMIN')")

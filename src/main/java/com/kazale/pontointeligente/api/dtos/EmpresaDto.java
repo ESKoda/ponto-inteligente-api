@@ -42,3 +42,12 @@ public class EmpresaDto {
 	
 	
 }
+//1) Dto: transfere objetos do banco ou api (camada de infra), informação cheia
+//2) transofrma em um model (pegamos o que queremos da Dto)
+//3) quando expor o json, colocar em um resource, alguns expoem no model
+
+
+
+
+
+

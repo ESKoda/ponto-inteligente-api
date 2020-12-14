@@ -9,6 +9,8 @@ import org.hibernate.validator.constraints.br.CPF;
 
 public class CadastroPJDto {
 	//essa classe tera a funcao de POST
+	//esses atributos são os que irao aparecer no json, entao exemplo
+	//o atributo perfil esta somente na entitie pq esse atributo esta somente no banco e nao aparece no json
 	private Long id;
 	private String nome;
 	private String email;
